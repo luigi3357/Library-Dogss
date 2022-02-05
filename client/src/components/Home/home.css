@@ -1,0 +1,96 @@
+.butonVolver{
+    position: absolute;
+    width: 120px;
+    height: 35px;
+    margin-left: -55px;
+    margin-top: 15px;
+    color: #fff;  
+    background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(122,121,121,1) 46%, rgba(252,252,252,1) 74%);
+
+}
+.butonVolver:hover{
+    background-color:#fff;
+    color:rgb(251, 6, 6);
+    border-radius: 30%;
+    transform: translate(12px , 50%);    
+    transition:1.5s;   
+}
+
+.title{
+    color:blue;
+    margin-top: 45px;
+}
+.selectAZ,option{
+    height: 25px;
+    width: 140px;
+margin-left: -425px;
+margin-top: 31px;
+border-radius: 50px;
+border: 5px double rgb(230,150,33);
+}
+
+
+.selectPeso{
+/* opacity: .1; */
+position:absolute;
+margin-top: 35px;
+margin-left: 290px;
+height: 25px;
+width: 140px;
+border-radius: 50px;
+border: 5px double rgb(230,150,33);
+}
+
+.containerCard{
+    display: grid;
+    position: absolute;
+    margin-top: 170px;
+    /* top:195px; */
+    /* width: 100px;  */
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 110px;
+    /* background: rgb(4,4,4); */
+    
+    
+}
+.card{
+    border:2px solid rgb(185, 141, 141) ;
+    width: 285px;
+    margin-top: -88px;  
+    height: 370px;
+    background: linear-gradient(130deg, rgba(4, 4, 4, 0.657) 0%, rgba(122,121,121,1) 46%, rgba(252,252,252,1) 74%);
+    border-radius: 30px;   
+}
+.card:hover{
+    /* box-shadow: 0px 5px 5px 0 rgb(4, 20, 245) ; */
+    position: relative;
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    width: 285px;
+    height: 370px;
+    box-shadow: 10px solid #fff;
+    border-radius: 30px;
+    transition:1.5s; 
+    /* display:none; */
+
+}
+
+.imageHome{
+    position: absolute; 
+     width: 100%; 
+     left: 50%;
+    top: 50%;
+    height: 125%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+    border-color: 2px solid rgb(255, 1, 1) ;
+    z-index: -1;
+}
+
+.paginado{
+    /* padding-bottom: 25px; */
+    margin-top: 856px; 
+}

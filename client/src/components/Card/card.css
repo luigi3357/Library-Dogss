@@ -1,0 +1,76 @@
+/* .containerCard{   
+    /* padding: 5px; */
+    /* width: 500px; */
+    /* margin: 10px 0; */
+    /* margin-top: -700px; */
+    /* border-radius: 30px; */
+    /* padding: auto;    */
+/* } */ */
+
+
+.container__h3__name{
+    display: flex;
+    position: absolute;
+    margin-left: 105px;
+    font-size: 18px;
+    /* text-decoration: none;    */
+    font-family: "Helvetica Neue", Helvetica ;    
+    font-weight: bold;
+    color: wheat;      
+}
+.textContent{
+    position: absolute;
+    width: 230px;
+    color: wheat;
+    /* margin-left: 5px; */
+    margin-top: -195px;
+    font-size: 25px;
+}
+
+.container__h5__peso{
+    position: absolute;
+    /* text-align: center; */
+    /* position: relative; */
+    width: 100px;
+    text-decoration: none;
+    margin-top: 95px;
+    color: blue;
+    margin-left: 95px;
+}
+
+.container__h6__altura{
+    position: absolute;
+    text-decoration: none;
+    width: 100px;                           
+    margin-top: 75px;
+    margin-left: 95px;
+    color: blue;
+}
+.container__b__temperament{
+    position: absolute;
+    display: block;
+    margin-top: 105px;
+    /* margin-bottom: -180px; */
+    margin-left: 60px;
+    text-align: center;
+    color:rgb(255, 1, 1)
+}
+.container_b2_temperament{
+    position: absolute;
+    display: grid;
+    /* border:2px solid #000; */
+    width:240px;
+    height:40px;
+    color:#000;
+    margin-left:25px;
+    text-align: center;
+    margin-top: 135px;
+}
+.container__image__Card{
+    position: absolute;
+    width: 280px;
+    height: 175px;
+    margin-top: -105px;   
+    border-radius:30px;
+    /* opacity: .1; */
+}

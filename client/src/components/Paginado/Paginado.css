@@ -1,0 +1,34 @@
+.containerPaginate{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .paginado {
+      display: flex;     
+    }
+    
+    .page-item{
+        list-style: none;
+        cursor: pointer;
+    }
+  
+    .page-link {
+        
+        background-color:rgb(161, 228, 255);
+      color: #202020;;
+      float: left;
+      padding: 4px 8px;
+      text-decoration: none;
+     /*  transition: ease-in-out 1s; */
+    }
+    
+    .page-link .active {
+      background-color: red;
+      color: #202020;      
+    }
+    
+    .page-link:hover:not(.active) {
+      background-color: #007BFF;
+      transition:2s ;
+      color: #eee;
+    }
