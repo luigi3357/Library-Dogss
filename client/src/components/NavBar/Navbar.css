@@ -1,0 +1,66 @@
+@media screen and ( min-width:320px ) {
+.containerNavBar{
+    width: 115%;
+    background-color: #22272E;
+    height: 35vh;
+    border-bottom: 15px solid rgb(4,4,4);
+    /* border: 2px solid red; */
+    user-select: none;    
+}
+.ContainerButtonNavbar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+.ContainerFilterNavbar{
+    display: grid;
+    margin-top: 1%;
+    grid-template-rows: repeat(5, 1fr);
+    grid-row-gap: 2% ;
+}
+.title{
+    margin-top: -.5%;
+    color: white;
+}
+}
+@media screen and ( min-width:400px ) {
+    .containerNavBar{
+        height: 38vh;
+    }     
+    }
+    @media screen and ( min-width:750px ) {
+        .containerNavBar{
+            width: 113%;
+            height: 19vh
+        }
+        .ContainerButtonNavbar{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);   
+            justify-content: space-around;
+        }
+        .ContainerFilterNavbar{
+            grid-template-columns: repeat(5, 1fr);
+            height: 35px;
+        }        
+        }
+@media screen and ( min-width:900px ) {
+    .containerNavBar{
+        background-color: #22272E;
+        min-height: 17vh;
+        user-select: none;    
+    }
+    .ContainerButtonNavbar{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ContainerFilterNavbar{
+        display: grid;
+        margin-top: 1%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .title{
+        margin-top: -.5%;
+        color: white;
+    }
+    }

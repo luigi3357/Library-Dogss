@@ -1,148 +1,95 @@
-.buttonVolverDetail{
-    position: absolute;
-    width: 120px;
-    height: 35px;
-    margin-left: 300px;
-    margin-top: 15px;
-    color: #fff;  
-    background: linear-gradient(0deg, rgba(4,4,4,1) 0%, rgba(122,121,121,1) 46%, rgba(252,252,252,1) 74%);
-   
-
+@media screen and (min-width:320px) {
+    .ContainerDetailAll{
+        background: rgb(4,4,4);
+        width: 99%;
+        border: 20px solid black ;
+        height:105vh;      
+    }
+    .ContainerDetail{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: 85%;
+        justify-content: center;
+        margin-left: 7.5%; 
+        border: 2px solid white;
+        background: linear-gradient(130deg, rgba(4, 4, 4, 0.657) 0%, rgba(122, 121, 121, 1) 46%, rgba(252, 252, 252, 1) 74%);
+        border-radius: 6px;
+    }
+    .buttonVolverDetail{
+        font-family: Garamond;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        background: linear-gradient(0deg, rgb(110, 110, 110) 0%, rgb(184, 184, 184) 46%, rgba(252, 252, 252, 1) 74%);
+    }
+    .imageDetailCard{
+        width: 100%;
+        object-fit: cover;
+        margin-top: 2%;       
+    }
+    .titleNameDetail{
+        font-family: Garamond;
+        font-weight: bold;
+        font-size: 18px;
+        color: black;
+        margin-top: 2%;
+        text-decoration: none;
+    }
+    .titleNameDetail2{
+        font-family: Garamond;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 18px;
+        color: black;
+        margin-top: -7%;
+        text-decoration: none;
+    }
+    .YearsDetail{
+        font-family: Garamond;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 17px;
+        color: rgb(24, 24, 122);
+        margin-top: -5%;
+        text-decoration: none;
+    }
+    .containerHDetail{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -5%;
+        font-family: Garamond;
+        font-weight: bold;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .pTemp{       
+        margin-top: -4%;
+        font-family: Garamond;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .pTemp2{
+        font-family: Garamond;
+        font-weight: bold;
+        font-size: 14px;
+        text-decoration: none;
+    }
+     .imageDetail{
+         display: none;       
+    }    
 }
 
-.buttonVolverDetail:hover{
-    background: linear-gradient(184deg, rgba(237,4,49,1) 0%, rgba(121,9,22,1) 31%, rgba(250,245,245,1) 100%);
-    border-radius: 30%;
-    transition:1.5s;
-   
-
-}
-
-.ContainerDetail{
-    position: absolute;
-    border-radius: 50%;
-    padding: 5px;
-    background: linear-gradient(130deg, rgba(4, 4, 4, 0.657) 0%, rgba(122,121,121,1) 46%, rgba(252,252,252,1) 74%);
-    border:2px solid rgb(185, 141, 141) ;
-    width: 520px;
-    height: 750px;
-    margin-top: 100px;
-    margin-left:690px;
-    border-radius: 30px;
-   
-
-}
-
-.imageDetail{
-    position: absolute; 
-     width: 50%; 
-     left: 50%;
-    top: 50%;
-    height: 100%;
-    margin-left: -320px;
-    object-fit: cover;
-    transform: translate(-50%,-50%);
-    border-color: 2px solid rgb(255, 1, 1) ;
-    z-index: -1;
-   
-
-}
-
-.titleNameDetail{
-    position: absolute;
-    display: flex;
-    text-decoration: none;   
-    font-family: "Helvetica Neue", Helvetica ;    
-    font-weight: bold;
-    margin-left: 110px;
-    color: wheat;
-   
-
-}
-
-.imageDetailCard{
-    position: absolute;
-    width: 500px;
-    height:300px;
-    margin-top: 75px;   
-    margin-left: -245px;
-    border-radius:30px;
-   
-
-}
-
-.YearsDetail{
-    position: absolute;
-    color: #fff;
-    width:100px;
-    height:30px;
-    margin-top: 395px; 
-    margin-left: 40%;
-   
-
-}
-
-.heightDetailmin{
-position: absolute;
-margin-top: 430px;
-margin-left: 90px;
-color: rgb(0, 47, 255);
 
 
-}
-
-.heightDetailmax{
-    position: absolute;
-    margin-top: 430px;
-    margin-left: 305px;
-    color: rgb(0, 47, 255);
-   
-
-}
-
-.weightDetailmin{
-    position: absolute;
-    margin-top: 490px;
-    margin-left: 90px;
-    color: rgb(0, 47, 255);
-   
-
-}
-
-.weightDetailmax{
-    position: absolute;
-    margin-top: 490px;
-    margin-left: 305px;
-    color: rgb(0, 47, 255);
-   
-
-}
-
-.h2Temp{
-    position: absolute;
-    margin-top: 545px;
-    color:red;
-    margin-left: 145px;
-    /* margin-top: -20px; */
-   
-
-}
-
-.pTemp{
-    position: absolute;
-    margin-top: 595px;
-    margin-left:55px;
-    color:blue;
-   
-}
-
-.Loading{
-color:red;
-font-size: 105px;
-}
-
-.borrar{
-    position: absolute;
-    width: 2000px;
-    background: #000;
-}
+ /* position: fixed; 
+        width: 150%; 
+        left: 50%;
+        top: 50%;
+        height: 50%;
+        object-fit: cover;
+        transform: translate(-67%,-100%);
+        border-color: 2px solid rgb(255, 1, 1) ;
+        z-index: -1; */

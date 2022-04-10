@@ -1,0 +1,65 @@
+@media screen and (min-width:320px) {
+    
+    .buttonCrated1 {
+        height: 30px;
+        width: 100%;
+        font-size: 9px;
+        background: linear-gradient(0deg, rgba(4, 4, 4, 1) 0%, rgba(122, 121, 121, 1) 46%, rgba(252, 252, 252, 1) 74%);
+        color: black
+    }
+
+    .buttonCrated1:hover,
+    .buttonCrated2:hover {
+        cursor: pointer
+    }
+
+    .buttonCrated2 {
+        height: 30px;
+        width: 108%;
+        background: linear-gradient(0deg, rgba(4, 4, 4, 1) 0%, rgba(122, 121, 121, 1) 46%, rgba(252, 252, 252, 1) 74%);
+        color: black
+    }
+}
+@media screen and (min-width:400px) {
+    
+    .buttonCrated1 {
+        width: 80%; 
+        font-size: 12px;
+    }  
+
+    .buttonCrated2 {
+        width: 80%;
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .buttonCrated1 {
+        width: 70%; 
+        font-size: 14px;
+    } 
+    .buttonCrated2 {
+        width: 70%;
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:900px) {   
+
+    .buttonCrated1 {
+        height: 35px;
+        width: 150px;
+        background: linear-gradient(0deg, rgba(4, 4, 4, 1) 0%, rgba(122, 121, 121, 1) 46%, rgba(252, 252, 252, 1) 74%);
+        color: #fff
+    }
+
+    .buttonCrated1:hover,
+    .buttonCrated2:hover {
+        cursor: pointer
+    }
+
+    .buttonCrated2 {
+        height: 35px;
+        width: 150px;
+        background: linear-gradient(0deg, rgba(4, 4, 4, 1) 0%, rgba(122, 121, 121, 1) 46%, rgba(252, 252, 252, 1) 74%);
+        color: #fff
+    }
+}

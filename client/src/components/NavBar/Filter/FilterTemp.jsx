@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { filterTemp } from "../../actions";
+import { filterTemp } from "../../../actions";
 import "./filterTemp.css"
 
 
@@ -22,7 +22,7 @@ function handleFilterTemp(e){
             className="filterTemp" 
             onChange={e =>{handleFilterTemp(e)}}
             >
-                    <option value='All'>Todos los Perros</option>
+                    <option value='All'>All The Dogs</option>
                     {allTemp.map(c=>{
                         return <option value={c.name} key={c.id}>{c.name}</option>
                     })}

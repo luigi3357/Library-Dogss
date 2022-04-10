@@ -2,17 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDogs, getTemp, orderByName, orderByWeight } from "../../actions";
-import { Link } from "react-router-dom";
-import  Card  from '../Card/card.jsx'
+import Card from '../Card/card.jsx'
+import { NavBar } from "../NavBar/NavBar";
 import { Paginado } from "../Paginado/Paginado";
-import { SearchBar } from "../SearchBar/SearchBar";
-import { FilterTemp } from "../Filter/FilterTemp";
-import { FilterCreated } from "../Filter/filterCrated";
-import { Created } from "../DogCreated/Created";
-import './home.css'
-// import { Detail } from "../Detail/Detail";
 
-// import { NavBar } from "../NavBar/NavBar";
+import './home.css'
+
 
 
 export default function Home() {
@@ -23,13 +18,17 @@ export default function Home() {
 
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [dogPerPage, setDogPerPage] = useState(8);
+    const [dogPerPage, setDogPerPage] = useState(9);
     const indexLastDog = currentPage * dogPerPage;
     const indexFirstDog = indexLastDog - dogPerPage;
     const currentDogs = allDogs.slice(indexFirstDog, indexLastDog);
 
+    const [pageNumberLimit, setPageNumberLimit] = useState(10)
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(10)
+    const [minPageNumberLimit, setMinPageNumberLimit] = useState(0)
+
     const paginado = (pageNumber) => {
-        setCurrentPage(pageNumber)       
+        setCurrentPage(pageNumber)
     };
 
 
@@ -38,22 +37,8 @@ export default function Home() {
     }, [dispatch])
 
     //order
-    function handleOrderByName(e) {
-        e.preventDefault();
-        dispatch(orderByName(e.target.value));
-        setCurrentPage(1);
-        setOrden(`Ordenado ${e.target.value}`);
-        
-    }
-    function handleOrderByWeight(e) {
-        e.preventDefault();
-        dispatch(orderByWeight(e.target.value));
-        setCurrentPage(1);
-        setOrden({
-            ...orden,
-            orden:`Ordenado ${e.target.value}`
-        })
-    }
+
+
 
     useEffect(() => {
         dispatch(getDogs());
@@ -61,64 +46,47 @@ export default function Home() {
 
     return (
         <div className="containerHome">
-                <div className="containerVolver">                
-             <Link className="itemVolver" to="/">
-                    <div>
-                        {/* <img src="" alt="not found" /> */}
-                    </div>
-                    <button className="butonVolver">Volver</button>
-            </Link>
-            </div>
-
-            <h1 className="title">DOGS</h1>
-            <div className="filtercontainer" >
-                <div className="searchbar">
-                <SearchBar />
-                </div>
-                <Created className="Crear_Refresh"/> 
-            
-            <div>
-                <div >
-                    <select className="selectAZ" onChange={e => { handleOrderByName(e) }}>
-                        <option className="option">Ordenar</option>
-                        <option className="option" value='asc'>Ordenar A/Z</option>
-                        <option className="option" value='desc'>Ordenar Z/ A</option>
-                    </select>                                                  
-                    <select className="selectPeso" onChange={e => { handleOrderByWeight(e) }}>
-                        <option value='weight'>Ordenar por Peso mayor</option>
-                        <option value='weight_desc'>Ordenar por Peso menor </option>
-                    </select>
-                    <FilterCreated />  
-                    <FilterTemp setCurrentPage={setCurrentPage} />
-                </div>
-            </div>
-            </div> 
-<div className="containerCard">
-            {currentDogs?.map((e) => {
-                return (
-                    <div key={e.id}className="card">
-                    <Link to={"/home/" + e.id}>                       
-                        <Card 
-                        name={e.name} 
-                        image={e.image ? e.image : 'https://st2.depositphotos.com/1047356/8108/i/600/depositphotos_81084856-stock-photo-beautiful-black-cute-dog-silhouette.jpg'} 
-                        temperament={e.createdInDb? e.temperaments.map(el=> el.name+" "):e.temperament}
-                        // temperaments={e.temperaments}
-                        height={e.height} 
-                        weight={e.weight} 
-                        key={e.id} />                        
-                    </Link>
-                    </div>
-                )
-            })}
+            <NavBar
+                setCurrentPage={setCurrentPage}
+                setOrden={setOrden}
+                orden={orden}
+            />
+            <div className="containerCard">
+                {currentDogs?.map((e) => {
+                    return (
+                        <div key={e.id} className="card">
+                            <Card
+                                id={e.id}
+                                name={e.name}
+                                image={e.image ? e.image : 'https://st2.depositphotos.com/1047356/8108/i/600/depositphotos_81084856-stock-photo-beautiful-black-cute-dog-silhouette.jpg'}
+                                temperament={e.createdInDb ? e.temperaments.map(el => el.name + " ") : e.temperament}
+                                // temperaments={e.temperaments}
+                                height={e.height}
+                                weight={e.weight}
+                                key={e.id}
+                            />
+                        </div>
+                    )
+                })}
             </div>
             <Paginado
-             className="Paginado" 
-             dogPerPage={dogPerPage} 
-             allDogs={allDogs.length} 
-             paginado={paginado} />
 
-            <img className="imageHome" src="https://i.pinimg.com/originals/c7/f7/9b/c7f79b87ecdc215aec81df1635779a7f.jpg" alt="Not Found" />
-           
+                className="Paginado"
+                dogPerPage={dogPerPage}
+                allDogs={allDogs.length}
+                paginado={paginado}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                setdogPerPage={setDogPerPage}
+                pageNumberLimit={pageNumberLimit}
+                minPageNumberLimit={minPageNumberLimit}
+                maxPageNumberLimit={maxPageNumberLimit}
+                setMaxPageNumberLimit={setMaxPageNumberLimit}
+                setMinPageNumberLimit={setMinPageNumberLimit}
+            />
+
+            <img className="imageHome" src="https://p4.wallpaperbetter.com/wallpaper/135/865/229/dog-low-poly-siberian-husky-animals-wallpaper-preview.jpg" alt="Not Found" />
+
 
         </div>
     )

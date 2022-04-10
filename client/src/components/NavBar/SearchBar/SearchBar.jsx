@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { useDispatch } from "react-redux";
-import { getSearch } from "../../actions";
+import { getSearch } from "../../../actions";
 import "./SearchBar.css"
 
 export const SearchBar = () => {
@@ -20,8 +20,8 @@ export const SearchBar = () => {
 
     return (
         <div className="coontainerSearchBar">
-            <input className="inputSearchbar" onChange={e=>{handleInputChange(e)}} type='text' placeholder="Buscar" value={name}></input>
-            <button className="buttonSearchbar" onClick={e=>{handleSubmit(e) }} type='submit'>Buscar</button>
+            <input className="inputSearchbar" onChange={e=>{handleInputChange(e)}} type='text' placeholder="Search" value={name}></input>
+            <button className="buttonSearchbar" onClick={e=>{handleSubmit(e) }} type='submit'>Search</button>
         </div>
 
     )
