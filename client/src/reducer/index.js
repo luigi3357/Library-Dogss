@@ -35,11 +35,10 @@ function rootReducer(state = initialState, action) {
         //filtros
         case 'FILTER_CREATED':
             const createFilter = state.allDog
-            const filterCreated = action.payload === 'created' ? createFilter.filter(el => el.createdInDb) : createFilter.filter(el => !el.createdInDb)
+            const filterCreated = action.payload === 'created' ? createFilter.filter(el => el.createdInDb) : action.payload === "api" ? createFilter.filter(el => !el.createdInDb): createFilter;
             return {
                 ...state,
-                dogs: action.payload === 'ALL' ? createFilter : filterCreated
-
+                dogs: filterCreated
             };
 
         case 'FILTER_TEMP':

@@ -51,28 +51,31 @@ router.get('/temperaments', async (req, res) => {
 router.post('/dog', async (req, res) => {
     let { 
         name, 
-        weight,
         weight_max,
         weight_min,
         height_max,
         height_min, 
-        height, 
         life_span, 
         temperament, 
         createdInDb, 
         image 
     } = req.body
+    console.log(req.body)
+    let height = [];
+    let weight = [];
+    weight.push(weight_min + "-" + weight_max).toString()
+    height.push(height_min + "-" + height_max).toString()
     try {
         const dogCreate = await Dog.create({ 
             name, 
-            weight,
+            weight: weight.toString(),
             weight_max,
             weight_min,
             height_max,
             height_min,  
-            height, 
+            height: height.toString(), 
             life_span, 
-            createdInDb, 
+            createdInDb: true,
             image 
         });
         const tempDb = await Temperament.findAll({
@@ -81,6 +84,7 @@ router.post('/dog', async (req, res) => {
         dogCreate.addTemperament(tempDb)
         res.send('Creado exitosamente')
     } catch (e) {
+        console.error(e)
         res.status(404).send(e)
     }
 })

@@ -32,7 +32,8 @@
 
     .list {
         text-decoration: none;
-        width: 100%;
+        margin: auto;
+        width: 90%;
     }
 
     .list-item {

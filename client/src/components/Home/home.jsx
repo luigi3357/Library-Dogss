@@ -52,14 +52,14 @@ export default function Home() {
                 orden={orden}
             />
             <div className="containerCard">
-                {currentDogs?.map((e) => {
+                {currentDogs ? currentDogs.map((e) => {
                     return (
                         <div key={e.id} className="card">
                             <Card
                                 id={e.id}
                                 name={e.name}
                                 image={e.image ? e.image : 'https://st2.depositphotos.com/1047356/8108/i/600/depositphotos_81084856-stock-photo-beautiful-black-cute-dog-silhouette.jpg'}
-                                temperament={e.createdInDb ? e.temperaments.map(el => el.name + " ") : e.temperament}
+                                temperament={e.createdInDb=== true ? e.temperaments.map(el => el.name + " ") : e.temperament}
                                 // temperaments={e.temperaments}
                                 height={e.height}
                                 weight={e.weight}
@@ -67,7 +67,8 @@ export default function Home() {
                             />
                         </div>
                     )
-                })}
+                }): <img src="https://www.makai.com.gt/img/loading.gif" alt="loading"/>
+                }
             </div>
             <Paginado
 

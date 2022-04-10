@@ -4,6 +4,7 @@
         flex-direction: column;
         width: 65%;
         height: 100%;
+        max-height: 500px;
         margin: auto;        
         border: 2px solid white;
         background: linear-gradient(130deg, rgba(4, 4, 4, 0.657) 0%, rgba(122, 121, 121, 1) 46%, rgba(252, 252, 252, 1) 74%);

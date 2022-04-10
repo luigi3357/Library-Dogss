@@ -1,22 +1,26 @@
 @media screen and (min-width:320px) {
-    .ContainerDetailAll{
-        background: rgb(4,4,4);
+    .ContainerDetailAll {
+        background: #22272E;
         width: 99%;
-        border: 20px solid black ;
-        height:105vh;      
+        border-top: 20px solid #22272E;
+        height: 95vh;
     }
-    .ContainerDetail{
+
+    .ContainerDetail {
         display: flex;
         flex-direction: column;
-        width: 75%;
-        height: 85%;
+        min-width: 200px;
+        width: 60%;
+        height: 95%;
         justify-content: center;
-        margin-left: 7.5%; 
+        /* padding-top: 20%; */
+        margin: 0 auto;
         border: 2px solid white;
         background: linear-gradient(130deg, rgba(4, 4, 4, 0.657) 0%, rgba(122, 121, 121, 1) 46%, rgba(252, 252, 252, 1) 74%);
         border-radius: 6px;
     }
-    .buttonVolverDetail{
+
+    .buttonVolverDetail {
         font-family: Garamond;
         font-weight: bold;
         font-size: 18px;
@@ -24,12 +28,14 @@
         cursor: pointer;
         background: linear-gradient(0deg, rgb(110, 110, 110) 0%, rgb(184, 184, 184) 46%, rgba(252, 252, 252, 1) 74%);
     }
-    .imageDetailCard{
+
+    .imageDetailCard {
         width: 100%;
         object-fit: cover;
-        margin-top: 2%;       
+        margin-top: 2%;
     }
-    .titleNameDetail{
+
+    .titleNameDetail {
         font-family: Garamond;
         font-weight: bold;
         font-size: 18px;
@@ -37,7 +43,8 @@
         margin-top: 2%;
         text-decoration: none;
     }
-    .titleNameDetail2{
+
+    .titleNameDetail2 {
         font-family: Garamond;
         font-weight: bold;
         text-transform: uppercase;
@@ -46,7 +53,8 @@
         margin-top: -7%;
         text-decoration: none;
     }
-    .YearsDetail{
+
+    .YearsDetail {
         font-family: Garamond;
         font-weight: bold;
         text-transform: uppercase;
@@ -55,7 +63,8 @@
         margin-top: -5%;
         text-decoration: none;
     }
-    .containerHDetail{
+
+    .containerHDetail {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-top: -5%;
@@ -64,32 +73,31 @@
         font-size: 15px;
         text-decoration: none;
     }
-    .pTemp{       
+
+    .pTemp {
         margin-top: -4%;
         font-family: Garamond;
         font-weight: bold;
         font-size: 18px;
         text-decoration: none;
     }
-    .pTemp2{
+
+    .pTemp2 {
         font-family: Garamond;
         font-weight: bold;
         font-size: 14px;
         text-decoration: none;
     }
-     .imageDetail{
-         display: none;       
-    }    
+
+    .imageDetail {
+        display: none;
+    }
 }
 
-
-
- /* position: fixed; 
-        width: 150%; 
-        left: 50%;
-        top: 50%;
-        height: 50%;
-        object-fit: cover;
-        transform: translate(-67%,-100%);
-        border-color: 2px solid rgb(255, 1, 1) ;
-        z-index: -1; */
+@media screen and (min-width:400px) {
+    .ContainerDetail {
+       min-width: 240px; 
+       max-width: 290px;
+       width: 60%;
+    }   
+}

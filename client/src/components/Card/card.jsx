@@ -11,7 +11,7 @@ function Card({ name, id, weight, height, image, temperament, temperaments, weig
                <Link to={"/home/" + id}>
                     <button
                         className="buttonCard">
-                        Mas info
+                        More Info
                     </button>
                 </Link>
                 <img
